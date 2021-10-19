@@ -122,6 +122,7 @@ def plot_nature_mutation(df):
 
 @log
 def nb_transac_per_codepostal(df):
+    prepare_codepostal(df)
     bycode_postal=df.groupby('new_code_postal').apply(count_rows)
     st.bar_chart(bycode_postal)
 
